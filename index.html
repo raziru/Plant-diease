@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,17 +10,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <a class="github-fork-ribbon" href="https://url.to-your.repo" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
     <h1>Plant Disease Classifier 🍀</h1>
-    <p>Built with ❤️ for Farmers using (Tensorflow, Tensorflow.js, Python, Javascript, HTML5)</p>
     <hr>
-
-
     <div class="upload-btn-wrapper">
         <button class="btn upload-file font-weight-500">
             <span class="upload-btn">
                 <i class="material-icons d-block font-50 pb-2">cloud_upload</i>
-                <p id="choose-text-1">Choose Image of Crop leaf</p>
+                <p id="choose-text-1">사진을 올려주세요</p>
             </span>
             <span class="upload-select-button" id="blankFile-1">
                 *Supports .png, .jpg, .jpeg, .jfif
@@ -31,9 +27,6 @@
         </button>
         <input type="file" name="uploadImage" id="uploadImage">
     </div>
-
-    <p class = "tutorial">😇 Check out how and why this was built <a href="https://medium.com/@rexsimiloluwa/building-a-plant-disease-classification-web-app-in-keras-and-tensorflow-js-d435829213fa" target="blank">HERE</a> → Download test images <a href="https://github.com/rexsimiloluwah/PLANT-DISEASE-CLASSIFIER-WEB-APP-TENSORFLOWJS/tree/master/test-dataset" target="blank">HERE</a> </p>
-
     <div class="row">
         <div class="box">
             <img src="" alt="" id="image" width="224" height="224">
@@ -42,7 +35,7 @@
         <div class="box box-result">
             <div class="init_status"></div>
             <div>
-                <h2>Your Plant is infected with :- <span class="pred_class"></span></h2>
+                <h2>Your 당신의 식물이 걸린 병은 :- <span class="pred_class"></span></h2>
                 
             </div>
             <div class="accuracy">

@@ -9,7 +9,7 @@ let pconf = document.querySelector('.box-result p')
         
         let progressBar = 
             new ProgressBar.Circle('#progress', {
-            color: 'limegreen',
+            color: 'lightreen',
             strokeWidth: 10,
             duration: 2000, // milliseconds
             easing: 'easeInOut'
@@ -29,9 +29,9 @@ let pconf = document.querySelector('.box-result p')
         // Initialize/Load model
         async function initialize() {
             let status = document.querySelector('.init_status')
-            status.innerHTML = 'Loading Model .... <span class="fa fa-spinner fa-spin"></span>'
+            status.innerHTML = '모델을 가져오고 있습니다<span class="fa fa-spinner fa-spin"></span>'
             model = await tf.loadLayersModel('./tensorflowjs-model/model.json');
-            status.innerHTML = 'Model Loaded Successfully  <span class="fa fa-check"></span>'
+            status.innerHTML = '가져오기 성공!  <span class="fa fa-check"></span>'
         }
 
         async function predict() {
@@ -70,18 +70,10 @@ let pconf = document.querySelector('.box-result p')
             
             let uploadedImage = e.target.value
             if (uploadedImage){
-                document.getElementById("blankFile-1").innerHTML = uploadedImage.replace("C:\\fakepath\\","")
-                document.getElementById("choose-text-1").innerText = "Change Selected Image"
-                document.querySelector(".success-1").style.display = "inline-block"
-
+                document.getElementById("file-1").innerHTML = uploadedImage.replace("C:\\fakepath\\","")
+                document.getElementById("choose-text-1").innerText = "다시 하려면 이미지를 업로드 하세요"
                 let extension = uploadedImage.split(".")[1]
-                if (!(["doc","docx","pdf"].includes(extension))){
-                    document.querySelector(".success-1 i").style.border = "1px solid limegreen"
-                    document.querySelector(".success-1 i").style.color = "limegreen"
-                }else{
-                    document.querySelector(".success-1 i").style.border = "1px solid rgb(25,110,180)"
-                    document.querySelector(".success-1 i").style.color = "rgb(25,110,180)"
-                }
+                
             }
             let file = this.files[0]
             if (file){

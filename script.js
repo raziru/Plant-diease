@@ -71,7 +71,7 @@ let pconf = document.querySelector('.box-result p')
             let uploadedImage = e.target.value
             if (uploadedImage){
                 document.getElementById("file-1").innerHTML = uploadedImage.replace("C:\\fakepath\\","")
-                document.getElementById("choose-text-1").innerText = "다시 하려면 이미지를 업로드 하세요"
+                document.getElementById("choose-text-1").innerText = "다시 하기"
                 let extension = uploadedImage.split(".")[1]
                 
             }
